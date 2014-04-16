@@ -1,0 +1,11 @@
+A FIVE PART PLAN FOR PATENT REFORM
+==================================
+
+This is the LaTeX source code for this whitepaper. Compilation will require:
+
+- the LaTeX packages geometry, float, indentfirst, ifxetex, fancyhdr, color,
+  graphicx, dblfloatfix, hyperref, and fontspec
+- if compiling with XeLaTeX, then the font Cambria
+
+Additionally, the legcite package, which is included in this repository under
+the `texmf` directory, must be installed.
