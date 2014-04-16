@@ -1,0 +1,71 @@
+%
+% pagestyle.tex
+%
+% Copyright 2014 Charles Duan. This program is free software: you can
+% redistribute it and/or modify it under the terms of the GNU General Public
+% License as published by the Free Software Foundation, either version 3 of the
+% License, or (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful, but WITHOUT
+% ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+% FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License along with
+% this program.  If not, see <http://www.gnu.org/licenses/>.
+%
+\makeatletter
+
+\definecolor{background}{cmyk}{.80,.10,.45,0}
+
+\chardef\maxpicnum=4
+\newcount\picnumcount
+
+\def\ps@wp{%
+    \def\sectionmark##1{%
+        \markboth{##1}{}%
+    }%
+    \def\@evenhead{%
+        \hb@xt@\z@{%
+            \color{background}%
+            \hskip -1in\relax
+            \hskip -\oddsidemargin
+            \leaders\vrule height \headheight depth .5\headsep\hfil
+            \hskip -\paperwidth\relax
+        }%
+        \begingroup
+            \Large\bfseries
+            A Five Part Plan for Patent Reform
+            \hfil
+            Page \thepage
+        \endgroup
+    }%
+    \def\@evenfoot{%
+        \hb@xt@\z@{%
+            \@tempdima=\footskip \advance\@tempdima-.5\headsep
+            \@tempdimb=\paperheight \advance\@tempdimb-\textheight
+            \advance\@tempdimb-\headsep \advance\@tempdimb-\headheight
+            \advance\@tempdimb-\footskip
+            \color{background}%
+            \hskip -1in\relax
+            \hskip -\oddsidemargin
+            \leaders\vrule height \@tempdima depth \@tempdimb\hfil
+            \hskip -\paperwidth\relax
+        }%
+        \begingroup
+            \Large\bfseries
+            \firstmark
+            \hfil
+            \lower.4in\hbox{%
+                \includegraphics[height=.66in]{picture-\the\picnumcount.pdf}%
+            }%
+            \ifnum\picnumcount=\maxpicnum
+                \global\picnumcount=\z@
+            \else
+                \global\advance\picnumcount\@ne
+            \fi
+        \endgroup
+    }%
+    \let\@oddhead\@evenhead
+    \let\@oddfoot\@evenfoot
+}
+\makeatother

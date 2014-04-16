@@ -1,0 +1,2060 @@
+\documentclass[11pt,twocolumn,titlepage]{article}
+\usepackage{geometry}
+\usepackage[review,endnotes]{legcite}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{ifxetex}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{dblfloatfix}
+\usepackage[bookmarksnumbered,pdfpagelabels,draft,implicit=false]{hyperref}
+
+\geometry{
+includeheadfoot,
+hmargin=.75in,
+top=0pt,
+bottom=.4in,
+headheight=.5in,
+headsep=18pt,
+foot=28pt
+}
+
+\ifxetex
+    \usepackage{fontspec}
+    \setmainfont[Ligatures=TeX]{Calibri}
+\fi
+
+\floatstyle{ruled}
+\restylefloat{table}
+
+\input citations
+
+\title{A Five Part Plan for Patent Reform}
+\author{Charles Duan}
+\date{\today}
+
+\sloppy
+\hbadness=5000
+
+\input pagestyle
+
+\pagestyle{wp}
+
+\newif\ifshortcompile
+%\shortcompiletrue
+
+\begin{document}
+
+\onecolumn
+
+\tracingoutput=1
+\showboxdepth=1000
+\showboxbreadth=1000
+
+\thispagestyle{empty}
+\hbox{}
+\vfill
+\hbox to \textwidth{%
+    \hskip -1in
+    \hskip 7pt
+    \vbox to 0pt{%
+        \vss
+        \includegraphics[width=\paperwidth]{cover.pdf}%
+        \vskip -7pt
+        \vss
+    }%
+    \hss
+}
+\vfill
+\hbox{}
+
+\clearpage
+
+\tracingoutput=0
+
+\pagenumbering{roman}
+
+\hbox{}
+\vfill
+
+\centerline{\includegraphics[width=.5\textwidth]{pkthinks.pdf}}
+\vskip 0pt plus .3fill
+
+\begingroup
+
+\Large \parskip=.5\baselineskip \parindent=0pt
+\leftskip=.5in \rightskip=\leftskip
+
+The patent system is an important motivator for new technology. But in its
+present state, the patent system has problems and loopholes that allow for abuse
+and exploitation, harming rather than promoting innovation.
+
+In this white paper, we look at how to fix those problems in patent law, by
+identifying areas that are currently abused and that require reform. Those five
+areas are:
+
+\textbf{Accounting for all inventors.} The standards for patenting must account
+for all types of inventors, large and small, and especially those who work
+outside the patent system.
+
+\textbf{Clarity of patents.} Patents are intended to disseminate knowledge about
+new inventions and technologies. Thus, patent documents must be made clear and
+understandable, so that they serve that function.
+
+\textbf{Targeting the right parties.} Threats of complex patent litigation,
+levied against consumers, small companies, and non-technology businesses, stifle
+innovation without any corresponding benefit to inventors.
+
+\textbf{Avoiding gamesmanship in litigation.} Licensing and enforcement of
+patents should be about the merits of the patents, not about a party's
+ability to run its opponents into the ground with litigation costs.
+
+\textbf{Maintaining competition in the innovation economy.} Patent owners ought
+to use their patents in ways consistent with long-standing principles favoring a
+competitive marketplace.
+
+\endgroup
+\vfill
+
+\hbox{}
+
+\break
+
+\tableofcontents
+\clearpage
+\twocolumn
+\pagenumbering{arabic}
+
+\parskip=.5\baselineskip plus .2\baselineskip minus .1\baselineskip
+
+\section{Introduction}
+\SectionNote
+\AuthorityTag{Introduction}
+
+Patents are simultaneously one of the most obscure and one of the most
+contentious areas of the law. ``Even Rube Goldberg couldn't have invented
+anything as confused and perverse as America's patent and intellectual property
+protection system,'' said one scholar, comparing the patent system to the artist
+``famous for crafting machines of ridiculous complexity.''\note{schrage} That
+complexity has not stopped numerous efforts for reform, with members of Congress
+introducing eleven patent-related bills in 2013.\note{see patentprogress-guide (listing the bills)}
+
+One would think that this esotericity and contention would leave no room for agreement on patent policy. But there is one area of widespread agreement:
+patents are one of the most abused areas of the law.
+The term ``patent troll,'' coined by a lawyer
+in the early 2000s, is
+well known in the general lexicon to refer to an entity who produces no products
+of its own but rather asserts patents, often patents on inventions that the
+entity did not itself invent, against companies who do produce new technologies
+and products.\note{iam-troll} Criticisms of patent trolls, and of the patent system that gives
+rise to them, abound.
+
+These accounts of abuses by patent trolls are neither hypothetical nor
+academic. The harms to small businesses, innovators, and the economy are well
+documented and empirically researched. One report documented that small
+companies had stalled product development, delayed hiring new employees, or even
+gone out of business as a result of patent assertion.\note{see chien-oti at 16 &
+figure 3} Another widely-cited study estimated the direct costs of patent
+assertion by non-practicing entities (that is, companies that exist solely to
+assert patents)
+at \$29 billion in 2011, with \$10.8 billion of that coming from
+small- or medium-sized firms.\footnote{\sentence{see bessen-direct at table 4}.
+The authors argue that much of that cost is deadweight loss, not contributing to
+compensation for inventors.} Patent
+litigation is big business, making it an attractive target to those wanting to
+abuse it.
+
+Although there are abuses, it is also necessary to account for the important
+purposes and values
+that underlie the patent system. By providing the reward of a patent,
+patents give inventors
+an incentive to research and develop new inventions, and also give those
+inventors some lead time in bringing products to
+market.\note{see, e.g., chakrabarty at 307 (``The patent laws promote [the
+progress of science and the useful arts]
+by offering inventors exclusive rights for a limited period as an
+incentive for their inventiveness and research efforts.'');
+bonitoboats at 146 (``The Patent Clause itself reflects
+a balance between the need to encourage innovation and the avoidance of
+monopolies which stifle competition\ldots.'')} Without patents, the theory goes, small inventors would never spend time
+inventing, since large companies could sweep in, copy the inventions, and
+undercut the small inventors' businesses. And certainly many inventions through
+history, such as the light bulb, the airplane, and the photocopier, were
+invented by small inventors and protected by patents.\note{see lemley at
+722-723, 725-726, 734-735 (noting, in many cases, that many such inventions were
+the result of incremental improvements made by multiple independent inventors or
+teams of inventors)}
+
+To find the right direction for policy reform of the patent system, it is
+necessary first to reconcile these two competing threads, of the value patents
+have created and the harm they are causing.
+
+\subsection{A Generally Good System, But Often Abused}
+\SectionNote
+
+These two divergent views of the patent system, as destroyer of small
+businesses and as engine of innovation, have led to wildly different and
+apparently irreconcilable views of that patent system. On the one hand, some
+have called the system fundamentally flawed and advocated for the abolition of
+patents altogether.\note{see, e.g., boldrin at 12 (``Since there is no evidence
+that intellectual monopoly achieves the desired purpose of increasing innovation
+and creation, it has no benefits.\textellipsis This leads us to our final
+conclusion: intellectual property is an unnecessary evil.'')} Others have
+defended the need to protect inventors at all costs and opposed any changes that
+might upset or potentially weaken patents.\note{see, e.g., mossoff-forbes
+(``Weakening intellectual property laws due to negative policy rhetoric,
+hyperbolic internet commentary, and extensive lobbying by firms who choose to
+infringe patents because they don't want to pay the licenses offered to them by
+patent licensing firms is irresponsible.'')}
+
+But both of these views seem overly simplistic, and unfair to a complex system
+such as patents. The question is whether there is an adequate middle ground,
+where the benefits of the patent system can be maintained and even enhanced,
+while the drawbacks can be removed.
+
+At the most basic level, the answer to resolving these conflicting views on the
+patent system seems to be this: there is a core of patents that is useful and
+valuable to society. That core has been surrounded by layers and layers of
+abusive practices, clever lawyering, and moneyed interests to turn the patent
+system into something entirely different.
+
+The question, then, is how to separate out that valuable core from the layers of
+abuse. The simplest way to do so is to focus on the abuses that are currently
+occurring, and to categorize those so that they may be attacked individually. It
+is not difficult to find examples of those abuses, ranging from shotgun lawsuit
+campaigns targeted against small retail and service businesses, to overbroad
+patents stretched to cover basic ideas in technology, to monopolistic
+arrangements intended to keep out competition. The remaining discussion, then,
+will review these abusive practices within the patent system, and propose
+reforms to curb those practices, within the framework of our five-part focus for
+patent reform.
+
+\begin{table*}
+\vskip\baselineskip
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Type} & \textbf{What covered} & \textbf{Exclusive rights} \\
+\hline
+Copyright & Creative works &
+\rightskip=0pt plus 1fil\relax
+Copying, distribution, public performance, etc. \\
+Trademark & Product identifiers &
+\rightskip=0pt plus 1fil\relax Use in commerce \\
+Patent & Inventions &
+\rightskip=0pt plus 1fil\relax Making, using, selling, etc. \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Summary of major types of intellectual property.}
+\bblabel[Table~\#]{iptypes}
+\end{table*}
+
+\subsection{Five Areas for Reform}
+
+This white paper thus identifies five key areas in which the patent system is
+ripe for reform. These areas were selected based on current patent reform
+considerations, concerns raised by academics and the general public, and general
+considerations of policy and consumer interests. The areas are:
+\begin{itemize}
+\item\textbf{Accounting for all inventors.} Patents are not the only stimulus
+for invention and innovation. Numerous technology creators, such as computer
+software startups, open innovation communities, and academia, have other
+incentives to flourish,
+discover, and advance science and technology. These
+non-patent incentives should be celebrated, and not weakened by
+overbroad protection of patents.
+\item\textbf{Clarity of patents.} The grant of a patent is intended to disclose
+knowledge in exchange for a temporary monopoly over a certain class of
+inventions. This relies on clarity in two areas: (1) clarity in the description
+of the invention, so that others may learn from it, and (2) clarity in the
+description of the monopoly, so that others may know what is covered and what is
+not. Where a patent uses imprecise language and fuzzy boundaries, that patent
+may easily be abused and thus disserves the public.
+\item\textbf{Targeting the right parties.} Traditionally, patents were the
+domain of big technology companies, and the structure of patent acquisition and
+enforcement grew around that domain. Today, however, patent lawsuits fall on the
+doorsteps of small businesses and customers of technologies, parties who do not
+expect to be part of the patent game and are ill equipped to play. This provides
+an opportunity for abusers of the system to take advantage of unwary and
+unsuspecting consumers.
+\item\textbf{Avoiding gamesmanship in litigation.} Patent lawsuits are
+complicated and expensive. Much of this complexity and expense is necessary and
+expected, because the technologies are advanced, and the product markets
+at stake are large. But clever litigants can exacerbate this complexity, hoping
+to win cases not on the merits but rather on exhaustion and cost.
+\item\textbf{Maintaining competition in the innovation economy.} Because patents
+are a temporary monopoly, they necessarily and appropriately are an exception to
+the general view that competition is preferable to monopoly. But the inclination
+of any monopoly holder is to expand that monopoly beyond its anticipated reach.
+Thus, patent owners have attempted to use patents to hold up technology,
+block adoption of interconnection standards, and otherwise create undesirable
+anticompetitive situations.
+\end{itemize}
+These five areas for reform are interrelated, and many proposed reforms will
+deal with more than one area. But each of these five areas is independent, and
+solving one will not automatically solve others. There is no
+silver bullet to patent reform, and improving the patent system will require a
+long-term, multifaceted effort. But that effort is worth the potential
+innovation and creation that a well-crafted patent system will bring about.
+
+\section{Background on the Patent System}
+\AuthorityTag{Background}
+
+Because the patent system is a fairly complex and unusual area of the law, some
+background may be needed for those without much familiarity with patents. This
+section will discuss the basic theory behind why patents are issued, and then
+look at the mechanics of how patents are obtained and used.
+
+\subsection{The Theory of Patents}
+\SectionNote
+
+``Intellectual property'' is the term applied to various legal systems in which
+entities are given exclusive rights over non-tangible things. In the United
+States, as summarized in \inline{this at iptypes},
+there are generally three main types of intellectual property, which are
+generally distinguishable by the type of non-tangible things to which the
+exclusive rights are given. Copyrights cover creative works, such as books,
+music, and artwork. Trademarks cover names that are attached to
+products and services, such as brand names and logos. Patents cover inventions,
+such as machines, processes, and systems. The focus here, of course, is patents.
+
+The basic theory behind patents is that they provide an incentive for inventors
+to invent. A person might come up with a great idea for a new machine for
+shelling peanuts, say, but it might take a lot of time, money, research, and
+development to turn that idea into a marketable product or service. But once the
+shelling machine was on the market, then others could copy it and undercut the
+price.\note{see denicolo at 366 (explaining that innovation is ``non-rival'' in
+that ``once it is created, it can be shared at no cost'' by firms other than the
+inventor)}
+
+Without patents, the shelling machine inventor would probably do one of
+two things: (1) not spend the time and money in developing the shelling
+machine, choosing to do something else; or (2) operate the machine in a secret
+factory, not allowing anyone to see it. Neither of these two options is
+particularly desirable.\note{see fromer at 548 (``The theory is that this
+stimulation occurs by rewarding inventors for taking two steps they likely would
+not otherwise take: to invent in the first instance and to reveal information to
+the public about these inventions.'')} The first one means that fewer new
+inventions would be
+created, and the second option means that other inventors will not be able to
+improve on the invention.\note{see fromer at 548-549}
+
+Thus, patents provide a way out of this dilemma. A patent offers the patent
+owner the exclusive right to make, use, or sell the invention,\note{see 35usc at
+S 271} as a \emph{quid pro quo} for
+the inventor revealing to the world how the invention works in a written
+document called a patent specification.\note{see, e.g., eldred at 225 (``The
+issuance of a patent is appropriately regarded as a \emph{quid pro quo}---the
+grant of a limited right for the inventor's disclosure and subsequent
+contribution to the public domain.'')} Thus, inventors will have the incentives
+to invest time and resources into inventing (solving the first problem), and the
+public will have the benefit of the advancement in knowledge (solving the second
+problem).\note{see, e.g., pennock at 19 (``{While one great object
+was, by holding out a reasonable reward to inventors, and giving them an
+exclusive right to their inventions for a limited period, to stimulate the
+efforts of genius; the main object was `to promote the progress of science and
+useful arts;' and this could be done best, by giving the public at large a right
+to make, construct, use, and vend the thing invented, at as early a period as
+possible; having a due regard to the rights of the inventor.}'')}
+
+That last part is the key: patents are issued to advance the public's interest
+in knowledge and access to new technologies. Patents should encourage inventors
+to create and reveal new inventions for the benefit of everyone. This sentiment
+is in fact embodied right in the Constitution of the United States, which
+authorizes Congress to grant patents in order to ``promote the Progress of
+Science and useful Arts.''\note{patent-clause} Even Thomas Jefferson, the first
+patent examiner of
+the U.S. Patent Office, saw ``the exclusive right to invention as given not of
+natural right, but for the benefit of society.''\note{jefferson-letter}
+
+\subsection{Obtaining and Using a Patent}
+\SectionNote
+
+To obtain a patent, an inventor submits a patent application to the U.S. Patent
+and Trademark Office. The patent application includes two parts. The
+\emph{specification}, which usually includes drawings and text, should describe
+the invention in sufficient detail so that readers can recognize the inventor's
+contribution and learn how to reconstruct it.\note{see 35usc at S 112/a} The
+\emph{claims}, which are the
+numbered paragraphs at the end of the patent document, are the legal
+definition of the patent right.\note{see 35usc at S 112/b; osenga at 63-64
+(``[Patent
+claims] must serve the dual functions of putting boundaries on the patentee's
+monopoly and providing sufficient notice of that monopoly to allow the public to
+avoid infringing the patent.'')} Just as a title deed to a
+plot of land specifies
+the metes and bounds of the property, the claims specify the metes and bounds of
+what infringes and what does not infringe the patent.\note{see mpep at
+S 2173.05/a (``Applicants\ldots are required to make clear and precise the terms
+that are used to define the invention whereby the metes and bounds of the
+claimed invention can be ascertained.'')}
+
+The Patent Office will then examine the application. This includes
+reviewing the prior art: the examiner will search for similar
+patents, technical papers, and other information that predates the application,
+and try to find one that is sufficiently similar to the claims of the
+application.\note{see 35usc at S 102/a (no patent should issue on an
+invention that
+``was patented, described in a printed publication, or in public use, on sale,
+or otherwise available to the public'' before the relevant filing date); 35usc
+at S 103 (no
+patent should issue if ``the claimed invention as a whole would have been
+obvious before the effective filing date'')}
+If such prior art is found, then the examiner will reject the
+application, and offer the applicant a chance to respond.\footnote{\sentence{see
+mpep at S 706.02, 714}. The examiner may reject the application on other grounds
+as well, such as indefiniteness of the claims or inadequacy of the disclosure.}
+Often the examiner and the applicant will go through several rounds of exchanges
+and revisions to the patent application, until the examiner is satisfied and
+agrees to allow the application.\note{see mpep at S 1303} Then the Patent Office
+issues a patent to the applicant.\note{see mpep at S 1309}
+
+With patent in hand, the patent owner (called a ``patentee'') can now use the
+patent, up until the patent term expires, to sue others who infringe the
+patent.\note{see 35usc at S 281}
+Another party infringes a patent if they make, sell, use, offer to sell, or
+import something that comes within the claims of the patent.\note{35usc at S
+271} Often the
+patent
+owner and the accused infringer disagree what the patent claims mean, so this is
+resolved by the court hearing the lawsuit, in a procedure called ``claim
+construction.''\note{see markman-fc at 978-979; osenga at 64-66; cand-patrules
+at S 4 (claim construction proceedings)} Upon deciding
+the meaning of the patent claims and other issues,
+the court can decide whether the accused party infringes the patent. If so,
+then the court can award money to the patent owner, order the infringer to stop
+conducting the infringing activity, or both.\note{35usc at S 283-284}
+
+\subsection{The Role of the Troll}
+\SectionNote
+
+Patent trolls are an arguably new phenomenon that have arisen in the last few
+decades.\note{see, e.g., harkins at 410 (describing how a ``significant cottage
+industry has grown up'' that ``ushered in the era of `patent trolls'\,''); but
+see mossoff-myth} The term ``patent troll'' generally refers, to varying
+degrees, to an entity that asserts patents without producing any products or
+offering any services based on those patents. There is obviously a great deal of
+uncertainty in what constitutes a patent troll, and authors have proposed
+various alternate terms and definitions, such as ``non-practicing entity''
+(NPE), ``patent assertion entity'' (PAE), and ``patent monetizing entity''
+(PME), to name a few.\note{see ftc-2003 at chapter 2/(III)C2b(ii)B, at 31
+(describing characteristics of NPEs); chien-arms at 328 (``Patent-assertion
+entities are focused on the enforcement, rather than the active development or
+commercialization of their patents.''); jeruss at 370 (defining patent
+monetization entities as ones that ``described their main source of revenue as
+patent litigation or licensing'')}
+
+The rhetoric around patent reform often focuses on the harms of patent trolls
+and suggests a need to target those entities and their practices. And, indeed,
+there are good reasons to believe that when an entity does not actually put its
+patents into use, that entity is substantially more likely to engage in
+undesirable and abusive behaviors. For example, entities that do not practice
+their patents lack the incentive to truly educate the public about their
+inventions,\note{see duffy at 1395 (``Holding all else equal, a practiced patent
+discloses more, teaches more, and contributes more to the sum total of social
+knowledge than does a mere paper patent.'')} but rather they may prefer to wait
+for others to come up with those inventions independently and then spring up
+demanding a license fee. Also,
+patent trolls lack business relationships with manufacturers and other industry
+players, and are thus free to engage in abusive business practices
+without fear of repercussions.\note{see lemley-forest at 2165 (``It seems likely
+that practicing entities have in the past been more concerned than trolls about
+such reputational matters.'')}
+
+But patent trolls are symptomatic of broader problems with the patent system
+overall. Because the system permits abusive practices, it is not surprising
+that a business model has grown to take advantage of and profit from those
+abuses. But those abuses can continue to exist and to be used whether or not
+patent trolls are present---and, indeed, some evidence suggests that even
+operating, product-producing companies engage in the same sorts of abusive
+practices ordinarily ascribed to patent trolls.\note{see lemley-forest at 2170
+(``When it comes to patent enforcement, it is hard to conclude that trolls cost
+society more than practicing entities.'')}
+
+Thus, efforts to reform the patent system ought not to focus on defining and
+opposing patent trolls as a business model. Rather, efforts should be targeted
+at rooting out the loopholes, problems, and abuses of the system overall. When
+patent trolls are given nothing to take advantage of in the patent system, they
+will naturally wither away, and we will be left with a stronger system that
+promotes innovation and progress.
+
+\section{Accounting for All Inventors}
+\SectionNote
+\AuthorityTag{Accounting for All Inventors}
+ 
+The traditional rationale behind the issuance of patents is utilitarian: by
+granting limited monopolies on inventions, the government can incentivize
+individuals and firms to spend resources on inventing. The limited monopoly,
+namely the right to exclude others from practicing the invention for a period
+of time, both gives a financial reward to those who invent and grants an
+opportunity for them to commercialize their inventions without interference
+from competitors.\note{see, e.g., fromer at 547 & note 31 (citing sources)}
+
+The empirical evidence for this rationale is mixed. The area in which the
+patent incentive most clearly succeeds is in the pharmaceutical
+industry,\note{see eisenberg at 350 (``Biopharmaceutical research is often held
+out as a shining example of
+the success of the patent system in motivating private investment in
+R\&D.'')}
+but some have suggested that this is primarily the case because of artificially
+imposed
+regulatory requirements that necessitate the exclusive lead time offered by
+patents.\note{see eisenberg at 346 (noting that patent advocates cite
+drug regulation ``as a large part of the cost of drug development that can only
+be recovered if firms are allowed to charge patent-protected premium prices for
+new products.''); but see eisenberg at 359 (arguing that FDA regulation of new
+drugs in fact acts as a ``pseudo-patent'' complementing patent exclusivity)}
+In other fields of technology, surveys and other evidence have
+suggested that the patent incentive is insubstantial or vastly
+ignored.\note{see, e.g., seltzer at 929 (``Patents do not provide a useful
+incentive to innovate in the software industry, I contend, because the patent
+promise ill-suits the engineering and development practices and business
+strategies of software production.''); lemley at 736-738; checkpoint-brief at 3
+(``Software patents are not necessary to spur innovation among the Amici. Our
+engineers do not innovate because they hope to get patents.'')}
+
+In any event, it is unnecessary to consider in too much depth the empirical
+evidence for the patent incentive, because it is certainly not the only
+incentive for innovation. The fast-paced startup community, open source
+software, the prestige of publication, and prizes and rewards for new
+discoveries, among other things,
+are all alternative
+incentives for innovation beyond patents, as explained below.\note{see kewanee
+at 484 (``Certainly the patent policy of encouraging invention is not disturbed
+by the existence of another form of incentive to invention.'')}
+
+\subsection{Computer Software Startups}
+\SectionNote
+
+The widespread use of the Internet and computer
+technologies has led to a proliferation in small software startups. The
+market of mobile device applications, for example, is globally valued at over
+\$53 billion\note{pappas} and accounts for approximately 466,000 jobs created
+since 2007.\note{mandel at 13}
+Many of the major Internet companies today have their roots in such a small
+business.\note{see menell at 389 (``Many of the notable innovations---from
+Napster's peer-to-peer system to the Google search engine, YouTube, and
+Facebook---were hatched and initially developed in the Web 2.0 equivalent of the
+Silicon Valley garage: a dorm room.''); seltzer at 973 (noting that the software
+industry features ``{lower capital costs\ldots; lower pure research costs and a
+focus on implementation; and lower uncertainty of development}'')}
+
+Small software technology startups often do not rely on patents for protecting
+their innovations. With patent applications costing about \$25,000 to file
+and prosecute,\note{lemley-vc at 138 note 3 (citing that cost as ``not
+unreasonable based on my experience''); see also ipwatchdog-cost (citing costs
+of \$5,000 to \$15,000 for filing the application alone)}
+they are well beyond the financial reach of these small startups
+that may not even have \$25,000 to run their business in the first
+year.\footnote{The startup accelerator Y Combinator, for example, invests
+\$20,000 for a three-person startup. \sentence{see wired-ycombinator}.}
+Yet the
+number of such startups is proof that there is sufficient incentive to innovate
+in that arena even without patents.
+
+Instead, different incentives predominate. The first mover advantage is
+particularly valuable in the fast-paced world of computer software.\note{seltzer
+at 982-983} Network
+effects hold strongly with software, as adopters of a company's
+technology are less likely to move to competitive offerings due to built-up
+social networks, cost of converting data, and familiarity with user
+interfaces.\note{seltzer at 983-984}
+Additionally, software companies are prone to failure for numerous reasons, so many software engineers are comfortable
+with frequent ``pivots'' to entirely new ideas.\note{see ries at 149 (describing a pivot as ``a structured course correction designed to test a new fundamental hypothesis about the product, strategy, and engine of growth'')}
+The mere experience of starting a
+software company, say many such engineers, is incentive enough to innovate even
+in the face of daunting odds, as it is easy and nearly cost-free to abandon one
+idea and move on to the next.
+
+\subsection{Open Innovation Communities}
+\SectionNote
+
+Open innovation communities are collectives of individuals and entities who
+openly share their innovations, making those innovations available
+to others for use, adaptation, and improvement.\footnote{The term ``open
+innovation community'' is from \clause{dpl at 2 note 1}.} Although the open
+source software community is perhaps the best known of these, open innovation
+communities may be found in many other areas of technology besides software
+development, including electronic hardware manufacturing, 3D printing, biology,
+and environmental engineering.\footnote{\sentence{see dpl at 2 & note 1}.}
+
+To strong proponents of the patent incentive theory, open source software and
+related models of innovation present a quandary: how can innovation occur in a
+world where products are given away for free and competitors are allowed---even
+encouraged---to copy? Yet widespread use and constant improvement of open source
+software suggests that those incentives must still be present. Some of the most
+widely used software programs today, including the GNU/Linux operating system,
+the Apache HTTP server, and the Firefox web browser, were developed by the open
+source community.
+
+Indeed, scholars have documented those alternative incentives that have
+contributed to the growth of the open source software and other communities.
+Reputation benefits play a significant role: as one seminal work put it in
+describing two popular software projects, ``by properly rewarding the egos of
+many other hackers, a strong developer/coordinator can use the Internet to
+capture the benefits of having lots of co-developers.''\note{cathedral-bazaar at
+43 (describing Linux and fetchmail); see also dpl at 17} Companies like IBM and
+Red Hat invest in open source development to accrue returns such as consulting
+services.\note{see benkler at 46; brodkin-red-hat} And basic ideals of sharing
+and disseminating knowledge motivate others.\note{see, e.g., stallman at 129
+(``My work on free software is motivated by an idealistic goal: spreading
+freedom and cooperation. I want to encourage free software to spread, replacing
+proprietary software that forbids cooperation, and thus make our society
+better.'')} Thus, a variety of incentives, entirely apart from the patent
+incentive, can spur innovation within open innovation communities.
+
+\subsection{Alternative Rewards for Invention}
+\SectionNote
+
+Patents are one type of reward for innovation, but there are many others.
+Prizes for innovation have been suggested as a solution to the economic
+inefficiency of patent monopolies. ``The alternative of awarding prizes would be
+more efficient and more equitable,'' writes one prominent
+economist.\note{stiglitz; see also kremer (proposing an auction process by
+which the government buys out most patents, offering the buyout price as a
+prize)} And  numerous prizes are granted to incentivize societal progress:
+Alfred Nobel, for example, bequeathed his fortune to establish prizes awarded to
+``those who, during the preceding year, shall have conferred the greatest
+benefit to mankind.''\note{nobel-will}
+
+There are many examples of rewards for innovation, beyond the straightforward
+prize. Academics are rewarded for their ideas and discoveries by having their
+papers accepted in journals. Foundations run competitions for the first person
+to solve an unsolved problem, to encourage inventors to develop creative
+solutions. Governments provide tax incentives for research and development. And
+researchers with new ideas can apply for grants, both government and
+privately-funded, to pursue those ideas.\footnote{For a comprehensive overview
+of rewards for innovation, see generally \clause{hemel}.}
+
+An example of the last of these types of rewards incentivizing innovation may be
+found in the development of the Internet. Many Internet technologies were built
+under federal grants,\footnote{Much of early Internet technology research was
+funded by the Advanced Research Projects Agency (ARPA, now DARPA). \sentence{see
+rfc2235 at 1-6}.}
+which incidentally restricted acquisition of
+patents on the technology.\note{See 35usc at S 200-212}
+Further Internet development was supervised
+by standards organizations like the W3C, which expressly disallows patenting of
+technology adopted into standards.\footnote{More specifically, if a participant
+in a W3C standard acquires a patent essential to the standard, the participant
+must generally grant a royalty-free license to the public for that patent.
+\sentence{w3c-patent at S 3.1, 5}.}
+The reward of a federal grant or
+incorporation into an Internet standard was sufficient to bring about incredible
+technological development without the use of patents.
+
+Certainly none of these alternate incentives can entirely supplant the patent
+system, as each person is motivated by different incentives. What is important,
+though, is that no single type of incentive is the sole or predominant engine of
+new innovation and technology.
+
+\subsection{Conflicts Between the Incentives}
+\SectionNote
+
+While, in an ideal world, all of these
+incentives would complement each other to maximize invention, in reality these
+incentives conflict and sometimes work at opposing purposes. The focus here is
+particularly on how the patent incentive can conflict with other incentives to
+innovate, and how reforms to the patent system can reduce these conflicts.
+
+For example, the first mover advantage is an incentive for startup
+entrepreneurs, and that incentive is undercut when second movers or even
+non-movers acquire and assert patents. Thus, there is substantial anecdotal
+evidence of innovative software startups dropping products or closing shop
+altogether in
+the face of patent threats.\note{see, e.g., chien-oti at 16-17 & figure 3; tal
+at 6:20-6:37 (``[Interviewer]: Did it put your business in danger? [Startup
+founder] Jeff Kelling: It did, and they knew that. The settlement they wanted to
+get was just enough to put us in danger, but not to close us, and I'll stop
+there.'')}
+
+The interference between patents and open source software is also well known.
+One study from 2004 has shown that the Linux kernel, a popular and widely-used
+open source program, potentially infringes 283 patents.\note{osrm-linux at 1}
+Indeed, when a bundle
+of 882 patents were proposed to be sold in 2011, the Department of Justice
+intervened out of concern that the patents would ``jeopardize the ability of
+open-source software, such as Linux, to continue to innovate and
+compete.''\note{doj-cptn}
+Similarly, the authors of the GNU General Public License are of the view that
+patents ``obstruct free software development,'' which led to the inclusion of a
+mandatory patent license in the most recent version of the GPL.\note{whygpl;
+gplv3 at S 11}
+
+There is also a conflict between the patent incentive and incentives of
+alternate rewards. Patents can interfere with the ability of scholars to conduct
+research, thereby diminishing the ability of academia to pursue innovative
+ideas. However, this example is instructive, because patent law already
+provides an accommodation for this conflict: an exception for experimental use.
+That doctrine, which exempts from patent infringement non-commercial
+experimental uses of patented inventions,\footnote{\bblabel{expuse}\sentence{see
+whittemore at 1121 (``[I]t could never have been the intention of the
+legislature to punish a man, who constructed such a machine merely for
+philosophical experiments.''); rosuvastatin at 527 (``However, patenting does
+not deprive the public of the right to experiment with and improve upon the
+patented subject matter.''); see also cls-enbanc at 1322-1325 (Newman, J.,
+concurring and dissenting) (discussing experimental use doctrine)}.}
+accommodates those who invent to
+obtain public or academic recognition. Additionally instructive, however, is
+the degree to which this experimental use doctrine has been narrowed over
+time,\note{see eisenberg-exp at 1019-1020 (``For the most part, the courts have
+held that the experimental use defense does not apply to the facts of the
+particular cases before them.'')}
+reflecting an unfortunate shift in the relative valuation
+between the patent incentive and rewards-based research incentives.
+
+\subsection{Finding the Right Balance}
+\SectionNote
+
+One task for patent reform, then, is to consider
+adjustments to the patent system that better accommodate these alternate
+incentives for innovation. The goal of such adjustments is to better encourage
+these inventors incentivized by factors other than patents, and to ensure that
+patents do not stand in the way of those inventors.
+
+Consider the following ideas for recalibrating the patent system in view of
+these alternate incentives and alternate inventors.
+
+For one thing, the standards for granting patents should be reconsidered. Many
+aspects of the current patent system reflect an assumption that patents are the
+primary driver of innovation, and modern developments challenge that assumption.
+This question of patent quality is discussed in \inline{this at quality}.
+
+Along similar lines, patent law includes an old doctrine called ``experimental
+use,'' which protects those who engage in experimentation from the risk of
+patent infringement.\note{see this[discussion] at expuse and accompanying text}
+However, over the years courts have sharply narrowed the
+availability of the experimental use exception, exactly at a time when more and
+more experimentation is occurring, on the part of consumers, home inventors, and
+other small parties. Expansion of this doctrine could provide protection to that
+grassroots innovation that could otherwise be threatened by patents.
+
+Additionally, some have considered the possibility of using specially-configured
+patent licenses to promote open innovation rather than interfere with it. The
+idea is
+that a properly crafted license agreement attached to a patent could encourage
+others to share knowledge rather than hold it closed behind patents, in the same
+way that copyright licenses like the GPL and Creative Commons licenses encourage
+others to share creative works.
+
+One such proposal, the Defensive Patent License (DPL), institutes a system by
+which an entity may agree not to assert its patents against other DPL members,
+and in exchange the entity receives an automatic, free license to all other
+patents under the DPL.\note{dpl at 38-39} Thus, the DPL ``blends the general
+strategy of defensive patenting with the [open innovation community] values of
+openness and freedom'' to ``provide an interoperable, technologically neutral,
+reliable, and legally binding commitment to defense.''\note{dpl at 38} Proposals
+like these take the patent system, which is built around the singular patent
+incentive, and turn it around to incentivize other values shared by different
+kinds of inventors.\footnote{For another example of such an alternate patent
+license, see \clause{twitter-license}.}
+
+\subsection{Improving Patent Quality}
+\SectionNote
+\bblabel[Section \#]{quality}
+
+A common complaint about the patent system is the number of ``low-quality''
+patents that are issued.\note{see, e.g., ftc-2003 at chapter 4/(II)A3, at 8
+(``Several participants voiced concern about too great an issuance of obvious
+patents.'')} There are frequent reports of patents on old or obvious ideas,
+particularly in the field of software.\note{see, e.g., eff-podcasting} Many
+people believe that these poor quality patents are the root of the problems that
+the patent system faces today. They thus call for better examination of patents
+through increased funding to the Patent Office, better training of examiners,
+and longer time for examination.\note{see generally adams-iam (collecting
+numerous views on patent quality)}
+
+Improving patent quality is a key component of accounting for all inventors and
+innovators. The process of invention is incremental,\footnote{``The world goes
+ahead because each of us builds on the work of our predecessors. `A dwarf
+standing on the shoulders of a giant can see farther than the giant
+himself.'\,'' \sentence{sony at 477 note 28 (quoting \clause{chafee at 511});
+see also lemley at 714; newton (``If I have seen further it is by standing on
+the sholders \sic! of Giants.'')}.} so inventors depend on a pool of knowledge
+not encumbered by patents, on which their inventions may be based. Part of this
+pool comes from unpatentable abstract ideas, laws of nature, and physical
+phenomena, which the Supreme Court has described as ``part of the storehouse of
+knowledge of all men\ldots free to all men and reserved exclusively to
+none.''\note{bilski at 3225 (quoting \clause{funkbros at 130}) (omission in
+original)} Another part of this pool comes from old technologies in the prior
+art,\note{see 35usc at S 102} as well as the knowledge that would be obvious to
+a
+``person having ordinary skill in the art.''\note{35usc at S 103} If a
+patent erroneously issues on a technology within that public pool, or if courts
+misread the boundaries of the pool too narrowly, then future innovators and
+future innovation are hindered.\note{see aptea at 152-153 (an obvious patent
+``withdraws what already is known into the field of its monopoly and diminishes
+the resources available to skillful men'')}
+
+The need to account for all inventors extends to many
+areas of the patent quality problem. Patent examination is one such area. The
+Patent Office traditionally searched for prior art primarily in the library of
+past patents,\note{see mpep at S 902.03(e); p2p at 135} but today, where so much
+innovation occurs outside of the patent system, the Patent Office is starting to
+seek out external sources of information to discover prior art.\footnote{There
+have been several formal efforts toward externalizing, or ``crowdsourcing,'' the
+prior art review effort. \sentence{see p2p-pr; 35usc at S 122/e1 (preissuance
+submissions by third parties in pending patent applications); wh-crowdsourcing
+(``[T]he USPTO is announcing a new initiative focused on expanding ways for
+companies, experts, and the general public to help patent examiners, holders,
+and applicants find relevant `prior art'\ldots.'')}}
+
+The basic standard for patent quality is another area where accounting for all
+inventors must play a role. The Supreme Court recognized this in the case
+\inline{ksr}.\note{*} For many years, the courts had used a test for what would
+be obvious to a person of ordinary skill in the art, namely that some
+``teaching, suggestion, or motivation'' to combine two different ideas must
+exist before the combination could be deemed obvious.\note{ksr at 1734} The
+Supreme Court rejected that test, based on its reasoning that the ``diversity of
+inventive pursuits and of modern technology counsels against limiting the
+analysis'' to that test---that is, because the test failed to account for all
+types of inventors and technology.\note{ksr at 1742} Nevertheless, the
+requirement for some sort of motivation to combine even persists after
+\inline{ksr}.\note{see, e.g., kinetic at 1368-1369 (reversing a finding of
+obviousness for a patent due in
+part to a lack of expert testimony on motivation to combine)}
+
+That conflict between the ``motivation to combine'' test and actual inventors is
+placed sharply in focus when considering open-source software developers, for
+example. Non-proprietary software developers and other innovation communities
+value interoperability and combinability of software. Thus, the legal assumption
+that new combinations are uncommon and often worthy of patents conflicts with
+the experiences of those software developers, for whom new combinations are
+routine and expected. Uncorrected, this mismatch means that patents would likely
+stifle rather than encourage the tinkering and exploration that drives many
+innovators today.
+
+A critical step in improving patent quality, then, is accounting for the ways in
+which all types of inventors work and innovate. The Patent Office and the courts
+need to know how a ``person having ordinary skill in the art'' approaches
+problem solving and invention. Without sufficient contact with actual innovators
+of all types, these decisionmaking bodies will not be able to craft patent
+policy that promotes innovation for all.
+
+So it is important for these decisionmakers to reach out to inventing
+communities, even those that do not file for patents, and it is important for
+those communities to reach out to the Patent Office and other
+decisionmakers.\note{see quality-comments at 4-6} Indeed, the White House and
+Patent Office have initiated several programs to obtain input on patent
+policy,\note{see, e.g., crowdsourcing-roundtable} and these initiatives should
+be continued and broadened to reach the whole innovating community.
+
+\section{Clarity of Patents}
+\SectionNote
+\AuthorityTag{Clarity of Patents}
+
+Among the most common complaints about the patent system is that patents are
+impossible to read. Patent documents are filled with complex language that
+often, to the lay reader or technical engineer, appears confusing or even
+misleading.\footnote{This section is drawn in part from
+\clause{nautilus-brief}.}
+
+It is no surprise, then, that those with technical but not legal skill do not
+find patents to be a useful source of technical information. One survey of
+researchers in the nanotechnology field found found numerous complaints on the
+usefulness of patents as technical disclosures.\note{ouellette} Among the
+surveyed researchers, 36\% never read patents, many of them complaining about
+``the style in which patents are written---patents were called `vague,' `legal
+jargon,' `incomprehensible,' and lacking `technical detail.'\,''\note{ouellette
+at 571} Those who had read patents had similar complaints: ``To a scientist,''
+an academic chemist wrote, ``the patent literature looks like an invention of
+lawyers for the benefit of other patent lawyers.''\note{ouellette at 576} Only
+38\% of surveyed researchers believed that one could reproduce an invention from
+the patent specification---a clear indication that disclosure and dissemination
+of knowledge, the cornerstone goals of the patent system, are not being
+served.\note{ouellette at 576}
+
+Those outside of academic circles have expressed the most concern about the
+difficulty of understanding patents and particularly patent claims. One author,
+in describing how to read patent claims, laments that they are ``a dense form
+of legal English,'' further explaining that the ``drafting of patent claims is a
+black art'' because claims are ``full of magic words.''\note{weir}
+``Patents are so vague,'' one attorney said, that ``[i]f someone claims
+infringement, the only way to resolve it is through
+litigating.''\note{steeves} Where litigation is ``the only way'' to assess
+the meaning
+of a patent, that patent has failed to serve its public notice function.
+
+This lack of clarity in patents is particularly unfortunate given the intention
+that patents are meant to serve, namely as disclosures to the world of new
+inventions and discoveries. This intention is embodied in the Constitutional
+provision authorizing the grant of patents, for ``promoting the Progress of
+Science and the useful Arts.''\note{patent-clause}  That intention of disclosure
+further underlies many of the traditional utilitarian justifications for
+patents.
+
+There is, of course, no reason that patents could not be written to be clear.
+The same sorts of inventions have been described in trade publications and
+academic journals for centuries, where clarity of explanation is prized.
+Instead, unclarity in patents arises out of the legal environment in which
+those patents are born.
+
+For example, the claims of patents are often the most criticized parts of
+patents when it comes to lack of the clarity. The claims of a patent are
+supposed to be written ``particularly pointing out and distinctly claiming'' the
+invention,\note{35usc at S 112/b} so that they inform the public of what is
+covered by the
+patent and what is not.\note{see mcclain at 424 (holding that a patent claim
+secures ``all to which [the patentee] is entitled'' while ``appris[ing] the
+public of what is still open to them''); unitedcarbon at 236 (finding that
+ambiguous patent claims create a ``zone of uncertainty'' that will ``discourage
+invention''); ge at 369 (``The limits of a patent must be known
+for\textellipsis the assurance that the subject of the patent will be dedicated
+ultimately to the public.'')} However, a series of cases has whittled away at
+these principles, permitting even highly vague and ambiguous claims to stand
+valid so long as they are not ``insolubly ambiguous,'' even if ``reasonable
+persons will disagree'' over the meaning.\note{exxon at 1375; accord datamize at
+1437} This test fails to serve that crucial public notice function: as one
+patent attorney put it, ``if reasonable people can disagree about the definition
+of the claim terms, how does this notify the public of the patentee's right to
+exclude?''\note{hartung at 844; see also laser at 27 (``If the Federal Circuit
+does not correct this trend soon, a competitor's ability to accurately determine
+the metes and bounds of current patents might deteriorate further.''); lemley at
+745 (``[T]he Federal Circuit has permitted a number
+of vague general disclosures that don't actually communicate very much to
+anyone, and patent lawyers often have incentives to write such vague
+disclosures.'')} The situation is equally dismal when it comes to searching for
+patents of relevance to a particular company.\note{mulligan-lee at 297-298}
+The permissibility of such unclear patents thus impedes operating businesses
+from safely operating, while providing no societal benefit in return.
+
+The rules of patent interpretation sometimes encourage this unclarity. As one
+example, due to various court cases that have read poorly worded patent
+specifications as limiting the scope of patents, it is common practice to
+include long lists of alternatives. Consider the following definition of
+``electronic network'' from a patent:
+\begin{quote}
+     Electronic Network---an electronic communication medium across which
+     sellers
+     and buyers may communicate, especially when communicating through the
+     owner's main site. Representative electronic networks include the Internet,
+     intranets, the public switched telephone network (``PSTN''), wireless voice
+     and data networks, and television networks, such as satellite, broadcast,
+     cable television, and two-way interactive cable. Electronic networks
+     further include hybrid systems, such as those in which sellers communicate
+     to buyers via one medium, such as cable television, and buyers communicate
+     to sellers via another medium, such as the Internet. Electronic networks
+     additionally include aggregated electronic networks, such as when buyers
+     communicate to sellers via multiple media, such the Internet, the
+     telephone, and cable television.\note{627patent at column 4, lines 26-40}
+\end{quote}
+This definition provides no useful technical information, and is in ways
+contradictory to the ordinary understanding of ``electronic network'' (one
+usually does not categorize the telephone network as such), so it thus serves
+only to attempt to broaden the scope of the patent, at the expense of others
+being able to understand it easily.\looseness=1
+
+More importantly, though, is the paradoxical situation that the most valuable
+patent is the most ambiguous patent. A patent that is prone to multiple
+interpretations will cost a targeted defendant more to analyze, thus making it
+more likely that the defendant will settle a case for a nuisance amount, and
+also making it more likely that any litigation over that patent will be costly
+and protracted. Thus, one economist traced how patents with ``fuzzy boundaries''
+have created ``a business opportunity based on acquiring patents that can be
+read to cover existing technologies and asserting those
+patents.''\note{bessen-regulation at 34}. Similarly, stakeholders reported to
+the
+Federal Trade Commission that the patent system ``generally creates `an
+incentive to be as vague and ambiguous as you can with your claims' and to
+`defer clarity at all costs.'\,''\note{ftcreport at 85; see also ppi at 3
+    (citing ``vague or expansive terms'' in patents as one of ``three cross
+    winds'' creating a flood of patent litigation); segal (``But as long as the
+    [patent] system exists, [noted patent assertor Erich] Spangenberg is going
+    to exploit its ambiguities and pokiness for all it's worth.''); bessen-book
+    at 164 (``The evidence suggests~.~.~.~that the deterioration of the notice
+    function might be the central factor fueling the growth in patent
+litigation'')}
+
+The patent examination process can furthermore be exploited to exacerbate patent
+unclarity. Often the patentability of an invention turns on the particular
+wording of the claims that define that invention, and the examiner's
+interpretation of that wording.\note{see phillips at 1317
+(``[T]he prosecution history provides evidence of how the PTO and the inventor
+understood the patent.'' (citing \clause{lemelson at 1206}))} Although the
+examiner's interpretation ought to
+be set forth in writing in the record
+of proceedings (the ``file history'' or ``file wrapper'') for any
+patent,\note{see cfr1-2 (``All business with the Patent and
+Trademark Office should be transacted in writing.''); cfr1-133 at /b (``In every
+instance where reconsideration is requested in view of an interview with an
+examiner, a complete written statement of the reasons presented at the interview
+as warranting favorable action must be filed by the applicant.'')}  in
+practice much of that information is never recorded.\note{see phillips at 1317
+    (observing that the file wrapper is ``less useful for claim construction
+    purposes'' because it ``often lacks the clarity of the specification'')} Patent
+    applicants, for example, can make oral presentations to
+examiners (called ``interviews'' in patent practice), in which the applicants
+explain aspects of their invention and the claims.\note{see cfr1-133; mpep at S 713} Much of this explanation is
+never recorded in the file history, leaving the now-owner of the patent free to
+assert any other interpretation of the patent that benefits the
+owner.\note{eff-comments at 12 (``Summaries [of interviews] are often too vague
+    and brief to provide meaningful notice to the public. The lack of a full
+    record means that applicants can make arguments in interviews without facing
+    the estoppel issues that would accompany a written filing.''); see also
+    ipfrontline (``Another possible reason to argue the merits of a patent
+    application orally rather than in writing is to avoid placing statements in
+    the record that can be used against a patentee years later\ldots. Although
+    the USPTO rules require patent applicants to provide a written record of an
+    interview to be placed into the application file, statements in such written
+    records are much more limited.''); inventivestep-interview (patent attorney
+    noting that, for some arguments presented in an interview, ``I may omit it
+    from my next response, thereby keeping it out of the record''); cf. mpep at
+    S 713.04 (``A complete written statement as to the substance of any
+    face-to-face, video conference, electronic mail or telephone interview with
+    regard to the merits of an application must be made of record in the
+    application, whether or not an agreement with the examiner was reached at
+    the interview.'')}
+
+Improving the clarity of the patent system is a multifaceted task, requiring
+support from many different areas.
+
+\subsection{Judicial Interpretations of Patent Language}
+\SectionNote
+
+Courts interpret patents during a
+phase of trial litigation called ``claim construction,''\note{see, e.g.,
+cand-rules at SS {4{-}1} to {-7}} and as such have the
+final say in how patents are interpreted.\note{see markman at 391
+    (holding that interpretation of claim terms is ``an issue for the judge, not
+    the jury''); cybor at 1456 (``[A]s a purely legal question, we review claim
+    construction de novo on appeal including any allegedly fact-based questions
+relating to claim construction.'')} Thus, it is important that good law be
+issued from these courts, and especially the Federal Circuit, the court of
+appeals that oversees and makes many of the rules for claim construction.
+Among other things, courts must carefully
+scrutinize patents without falling victim to obfuscating techniques used to
+make patented inventions appear more complex, broader, or more innovative than
+they actually are.\footnote{For an example of this situation, see
+\clause{wildtangent-brief}.}
+
+\subsection{Patent Examination Procedures}
+\SectionNote
+
+Since the Patent Office is the first body to
+interpret the text of patent applications, it is critical that its reasoning be
+made clear and available to others wishing to understand the content of
+patents.
+
+Part of this effort is simply to build a better record of the Patent Office's
+interpretations as it examines applications. Currently, examiners write Office
+Actions that identify reasons for rejecting applications, most often over prior
+art references. However, those Office Actions do not generally explain in
+detail how the examiner read the patent application or interpreted particular
+words in the claims.\note{see phillips at 1317 (noting that an Office Action
+``often lacks the clarity of the specification and thus is less useful for claim
+construction purposes'')}
+Such information would benefit the public in later reading
+the patent, and also assist the patent applicant in understanding the basis for
+rejection. Furthermore, communications between the examiner and the applicant
+should be made of record.\note{see glossary-comments at 4}
+
+Additionally, the Patent Office should push for applicants to draft clearer
+patents. One of the requirements for granting a patent is drafted claims
+``particularly pointing out and distinctly claiming the subject matter which the
+applicant regards as his invention.''\note{35usc at S 112/b}
+Patent examiners could more rigorously
+enforce this requirement, asking applicants to choose clearer, simpler language
+that more distinctly defines the invention.\footnote{The Patent Office is
+currently looking at a ``pilot program aimed at encouraging the use of clearer
+language within patent claims.'' \sentence{wh-crowdsourcing}.}
+
+\subsection{Limiting the Volume Game}
+\SectionNote
+\bblabel[Section \#]{volume}
+
+One strategy for manufacturing unintelligibility in
+patents is increasing volume: applying for patents with hundreds of claims, and
+using continuation practice to acquire dozens of patents on the same
+invention.\note{see moore at 81}
+This volume game contributes nothing to the public store of knowledge---an
+invention is secured through a few claims just as it is secured through
+hundreds---and the purpose of acquiring this thicket of patent claims is to
+increase the burden on those trying to assess the nature of the patents and
+operate businesses in clearance of them.\note{see shapiro at 126 (``In short,
+with multiple overlapping patents\ldots we have a volatile mix of two powerful
+types of transaction costs that can burden innovation\ldots.''); moore at 82-83
+(noting particularly that such continuation practice with respect to
+pharmaceutical patents ``serves no useful social purpose'')}
+
+Limiting this practice of unnecessary inflation of patent portfolios would
+contribute much to streamlining the patent system, simplifying the process for
+applicants, examiners, and third parties. This reform could be implemented
+through Patent Office rules, through legislation, and/or by judicial
+rule.\footnote{The USPTO attempted to institute certain limiting rules on
+continuations, but that effort was rejected by the Federal Circuit, \clause{see
+tafas}, and the USPTO declined to pursue the effort further, instead voluntarily
+rescinding the proposed rules, \clause{see tafas-settlement}.}
+
+\subsection{Improved Technological Tools}
+\SectionNote
+
+Although patent language is complex and
+technical, it is also highly structured, potentially making it amenable to
+automated analysis such as natural language processing.\note{see, e.g.,
+sheremetyeva} Such systems could
+simplify the interpretation of patents and greatly reduce the cost of having to
+hire experienced counsel to review patents. Additionally, automated systems
+would introduce a level of objectivity into patent interpretation, and
+potentially stave off incentives for gamesmanship in obscure patent
+language.\looseness=1
+
+
+\section{Targeting the Right Parties}
+\SectionNote
+\AuthorityTag{Targeting the Right Parties}
+ 
+A truly astonishing aspect of the patent litigation seen today is its volume:
+dozens of companies sued at a time, with hundreds or thousands more the targets
+of demand letters. Many of the targets are not the manufacturers of supposedly
+infringing products, but rather the users. Thus, small businesses offering
+wireless Internet access have been threatened for purchasing WiFi
+routers,\note{innovatio}
+iPhone
+application developers have been threatened for using Apple's in-app purchase
+mechanism,\note{lodsys}
+and innumerable individuals and companies have been targeted simply
+for having a scanner in the office.\note{scanner-troll}
+Today's patent wars are against end users
+and consumers.
+
+\subsection{Nineteenth Century Patent Trolls}
+\SectionNote
+\bblabel[Section \#]{farm-patents}
+
+Historically, this simply was not the case: patent battles, while still
+prevalent, were between large companies, not end users of technologies. The
+patent wars over sewing machines, airplanes, and automobiles, for example,
+involved only small numbers of patents and parties to lawsuits.\note{see
+chien-sw at 336-337}
+
+In one historical case, end users of technology were targeted. During the
+late nineteenth century,
+numerous patents were granted over agrarian tools, which led to ``scores of
+individual farmers who were sued for infringement based on farming tools they
+had bought, rather than invented.''\note{chien-sw at 330} Contemporaries at the
+time complained that ``the country is so large and the number of articles under
+patent so great that there are not one-tenth of our farmers who know whether
+their implements are patented or not.''\note{hayter at 65} As a result, patent
+owners and attorneys with ``\,`bully' and `wily' methods often convinced the
+inexperienced and `innocent' farmer that the patent covered the exact tool or
+implement in question and collected a royalty fee.''\note{hayter at 66}
+Ultimately, this led to a change in the law that made such patents much more
+difficult to obtain,\note{see chien-sw at 348} and associations of farmers also
+fought and won cases invalidating some of the most egregious patents, on basic
+farm tools like swinging gates and drivewells.\note{see hayter at 73-74, 76-77}
+
+Today we are seeing similar assertion of patents against end users because
+technology has become ubiquitous. Just as swinging gates and drivewells were
+necessary and widely used tools for an agrarian society in the 1800s, cell
+phones, computers, and software are necessary and widely used tools for every
+business today.
+
+As a result, parties who ordinarily would never be involved in the patent
+system are being dragged into it, due to their ordinary use of software
+technology.
+The Government Accountability Office found, in a study, that 39\% of patent
+lawsuits involving software patents were against non-technology firms:
+\begin{quote}
+One representative from a retail company noted that historically, all of the
+patent infringement lawsuits brought against the company used to be related to
+products they sold. However, as of mid-2012, the representative said that half
+of the lawsuits against the company were related to e-commerce software that the
+company uses for its shopping website---such as software that allows customers
+to locate their stores on the website---and were brought by [patent monetization
+entities]. Representatives of retail and pharmaceutical companies told us they
+also defend lawsuits brought by PMEs related to features on their
+websites---typically software that outside vendors provide to them, rather than
+something they developed. Additionally, city public transit agencies have been
+sued for allegedly infringing patents by using software for real-time public
+transit arrival notifications, according to a few stakeholders we
+interviewed.\note{gao-report at 23}
+\end{quote}
+
+These entities are attractive targets for lawsuits for a number of reasons, none
+of which is beneficial to the overall patent system. For one thing, end users
+tend to be unfamiliar with the patent system, so they are poorly equipped to
+defend themselves, compared to the technology companies that have dealt with
+such lawsuits traditionally.\note{see love at 1614 (``Also, compared to
+customers, manufacturers have a relative advantage litigating patent suits
+because they generally have greater knowledge of the industry, the prior art,
+and the patented invention's value.'')} Additionally, once end users have
+incorporated the manufacturer's product into their products or businesses,
+juries tend to unintentionally inflate the value of the patent due to the
+unrelated features of the products or services.\note{see love at 1633-1634
+(``[T]he larger the accused device, the harder it is for jurors to distinguish
+between value attributable to the patented invention and value attributable to
+other features and components.''); chao at 122 (discussing the
+``overcompensation problem'' that is ``particularly true when the patent
+involved only covers a single component of a multiple component product'')}
+These factors give abusive patent asserters the upper hand, without any
+corresponding benefit to the public or to innovation.
+
+Finding the right solution for protecting end users is difficult. The ordinary
+case---a customer buys a product off the shelf and is sued for patent
+infringement---is straightforward and sympathetic, but there is a multitude of
+business arrangements between technology manufacturers and users. End users may
+simply use a product, may modify the product, or may incorporate it into another
+device. Manufacturers may make a single line of products, or multiple lines, or
+custom products for each customer. These and other factors demand a nuanced
+solution to the problem of abuses against end users of technology. Several
+proposed solutions are discussed below.
+
+\subsection{Redirecting Patent Suits to Manufacturers}
+\SectionNote
+
+The most direct reform would be to redirect suits against end users toward
+manufacturer suits in appropriate situations. Some, for example, have suggested
+providing immunity to patent lawsuits for end users of technology who simply
+purchase products off the shelf.\note{long (citing the Electronic Frontier
+Foundation's statement on legislative solutions for patent reform); rackspace
+(``Congressman Farenthold offered a simple, workable solution to solve a big
+part of the problem: immunize end users of commodity-type products from patent
+litigation.'')} The patent owner would remain able to pursue claims against the
+manufacturer. This would satisfy fair compensation
+for the patent owner while ensuring that the patent dispute remains between
+parties experienced and expecting to be involved in patent lawsuits.
+
+The difficulty with direct immunization is that there are situations
+in which compensation from the end user is appropriate.\note{see, e.g.,
+patentlyo-surplus (suggesting an economic model in which theoretically
+compensation from an end user would be appropriate); but see patentlyo-surplus
+(noting that, in reality, the aforementioned analysis, ``even if mathematically
+correct, is largely irrelevant in the current climate'')}
+For example, when the
+end user is a technology company who commissions a product from a small
+developer, it may be appropriate for the technology company to defend a patent
+infringement lawsuit. As a result, such an immunity would need to
+be carefully tailored with appropriate exceptions to ensure that the burden of
+defense is placed on the appropriate party in all situations.
+
+One attempt to overcome this problem would be to permit lawsuits against end
+users but allow the manufacturer to be brought into the lawsuit as appropriate.
+For example, one scholar suggests an arrangement in which the end user could
+pull in the manufacturer into the lawsuit.\footnote{\sentence{see chao at
+132-134}. Chao adopts theory of contributory liability from torts, under which,
+if two people cause an injury and one of those two is sued, the sued person can
+bring in the other person. ``If contribution were applied to patent law,
+manufacturers of multi-component products accused of patent infringement would
+be able to demand that any supplier of an infringing component share in any
+potential liability.'' \sentence{chao at 133}.} This relieves some pressure on
+the end user, since the manufacturer is now involved in the lawsuit, but it
+would not solve the problem of lawsuits against customers who lack the resources
+to even defend themselves in the first place.
+
+\subsection{Customer Suit Exception}
+\SectionNote
+
+A second option deals with the timing of lawsuits against end users, rather than
+the substance of the lawsuit itself. The principle, known as the ``customer suit
+exception,'' is that if both the manufacturer and the end user are involved in
+separate patent lawsuits, then in appropriate situations the lawsuit against the
+end user will be ``stayed,'' or held off, until the manufacturer suit
+completes.
+
+The customer suit exception already exists in the law.\note{katz-v-lear at 1464
+(explaining that, under the customer suit exception, ``litigation against or
+brought by the manufacturer of infringing goods takes precedence over a suit by
+the patent owner against customers of the manufacturer'')} Courts justify the
+exception based on two reasons. First, if a decision is reached on the
+manufacturer suit, it will affect all the customer suits, but if a decision is
+reached on one customer suit, it will not necessarily affect other customers, so
+the manufacturer suit will save on overall litigation costs.\note{see love at
+1616-1617 (``In its first few decades of existence, courts applied the customer
+suit exception relatively liberally, justifying its application on efficiency
+grounds\ldots.'')} Second, courts recognized that, even in a suit against a
+customer, ``in reality, the manufacturer is the true defendant in the
+customer suit.''\note{see codex at 737-738; love at 1617}
+
+However, over time, courts have cut back on the customer suit
+exception.\note{see love at 1617-1618} Thus, there are several legislative
+proposals on the table to revive and expand the exception.\note{see goodlatte at
+section 5, S 296; leahy at section 4, S 299A; farenthold at section 4, S 300}
+Doing so would help to balance the rights of patent owners and end users of
+products.\note{love at 1635}
+
+\iffalse
+\subsection{Calibrating Damages}
+\SectionNote
+\bblabel[Section \#]{damages}
+
+The attractiveness of bringing suit against end users
+arises partly out of the idiosyncratic methods of calculating damages for
+patent infringement. Often courts attempt to compute a ``reasonable royalty''
+intended to reflect a percentage of revenues that the patent owner would have
+successfully negotiated as a license fee. However, this amount is often grossly
+overestimated: a traditional rule of thumb, for example, was that 25\% of
+[revenues/profits] were due as a license fee. Even though the 25\% rule has
+since been disapproved, courts still routinely award ``reasonable'' royalties
+amounting to large chunks of a product's value.
+
+Excessively high royalty rates are a particular problem for end users. If the
+royalty rate is too high in relation to the value the end user derives from the
+product, then the end user would be dissuaded from purchasing the product,
+creating an unproductive chilling effect on the adoption of technology and
+ultimately harming the consuming public.
+
+The problem is magnified because the value an end user derives from a product is
+hard to quantify. A consumer purchases a product for a variety of reasons and
+put it to a variety of uses, and often the patented aspect of the product is
+less important or unimportant to the consumer. Consider, for example, a coffee
+shop that installs a WiFi router for its customers' use, and is sued for patent
+infringement over a certain aspect of wireless network technology. How does one
+attribute a portion of coffee sales to the patent, which only indirectly adds
+value to the WiFi router, and which even more indirectly influences the
+purchases of coffee?
+
+Accordingly, as discussed below,\note{see this at reasonable-royalty} if damages
+for patent infringement were more carefully calibrated
+to the actual value of the patent vis à vis the business of the targeted
+company, suits against end users would likely diminish greatly because patent
+owners would stand to win little from such end users.
+\fi
+
+\subsection{Abolishing Software Patents Is Insufficient}
+\SectionNote
+
+A common thought is that, since
+many of the problems described above (and throughout this paper) arise in the
+field of software patents, the simple solution is to eliminate patentability of
+software.\note{see, e.g., lee (``Reiterating that "pure" software can't be
+patented wouldn't just be good law — it would also save the nation billions of
+dollars in litigation costs.''); burton at 88-90 (finding, in an informal survey
+of 49 software programmers, that 29 of them (59\%) thought that the United
+States should abolish software patents)}
+
+There are some practical issues in actually eliminating software patents
+(devising a definition of software patents that cannot be easily circumvented by
+clever lawyers is a problem\note{see chien-sw at 354 (`` One of the biggest
+challenges to `abolishing software patents' is the question of what exactly is a
+`software patent'?''); but see chien-sw at 356 (suggesting that ``a working
+definition, rather than a perfect definition, may be what is really needed'')}),
+but the more fundamental problem is that reforms specifically targeted toward
+software patents are temporary fixes for the problems of today.
+Although software patents are
+substantially problematic now,\note{see, e.g., gao-report at 22 (``Specifically,
+about 84 percent of [patent monetization entity] lawsuits from 2007 to 2011
+involved software-related patents\ldots.''); bessen-switch}
+this is likely because software is one of the
+most widely used technologies now.\note{see, e.g., brynjolfsson at 10 (``The
+difference between being a winner and being a lagging firm in IT-intensive
+industries is very large and growing. Using technology effectively matters more
+now than ever before.'')}
+
+Analogously, as discussed above, farm technology was
+widely used in the nineteenth century,
+and patents on farm technology were hotly contested.\note{see this at
+farm-patents}
+Patents on those farm tools were effectively abolished.\note{see chien-sw at
+348}
+But that fix to the patent system did not prevent the software patent
+problems faced today---it ultimately was a Band-Aid rather than a cure.
+
+The same would be true of eliminating software patents.
+The fundamental issue is that the technologies of
+tomorrow are unknown,\footnote{As an example, as the 3D printing industry grows,
+so does interest in patents on 3D printing. \sentence{see, e.g., wee-3dp
+(describing the ``patent land grab of 3-D intellectual property'')}.}
+so targeting patent reform to one specific field of
+technology means that the same problems will only arise again in a different
+technological sector.
+
+
+\section{Avoiding Gamesmanship in Litigation}
+\SectionNote
+\AuthorityTag{Avoiding Gamesmanship in Litigation}
+
+Patents are a privilege given by the government, and as such they must be
+enforced
+through the channels of government. In the United States, this means that
+enforcement of patents must be through the federal district courts.\note{see
+35usc at S 281} Thus, an
+essential part of the patent system must be an efficient litigation mechanism
+for enforcing patent rights.
+
+However, recent history has shown a patent litigation system that is used less
+and less for enforcement of legitimate rights, and more and more for abusive
+tactics intended to enrich a few savvy litigants while impoverishing the
+technology-consuming public.\note{see, e.g., ppi at 5 (``By filing plausible
+claims raising sufficient risk of loss for defendants, [PAEs] force companies to
+choose between expending millions of dollars to litigate the claims or settle
+for less than the cost of the litigation.\ldots [M]ost patent assertions are
+meant to drive settlements.'')}
+The ease of engaging in these abusive tactics, and
+the profitability of doing so, has given rise to an entire industry of patent
+litigants, known variously as non-practicing entities, patent assertion
+entities, or (derisively) patent trolls.\note{see ftcreport at 50 note 2, !60
+(distinguishing these terms)}.
+
+Low-quality patents are often blamed for the patent troll problem.\note{see,
+e.g., gao-report at 31-32 (``Some of the representatives from operating
+companies also said that [patent monetizing entities] are often more willing to
+bring lawsuits based on a broad interpretation of their patents'
+claims\ldots.''); mershon-trolls (``Critics say patent trolls amass vague or
+low-quality patents and use them to sue or extract licensing fees from
+companies, putting a strain on businesses and the larger economy.'')}
+And patent assertion entities often assert low-quality patents.\footnote{As one
+study found, nonpracticing entities owned 63.5\% of the most-litigated patents.
+\sentence{alw at 708}. The study further found that NPEs won only 8\% of their
+cases on the merits, while operating companies won 40\% of their cases.
+\sentence{alw at 708}.}
+But there are numerous
+tactics that are entirely unrelated to the quality of the patents being
+asserted, tactics that drive up costs of litigation and force unjustified
+settlements or court awards. It is these tactics that are the subject of this
+section.
+
+Abusive practices can be found through the entire patent enforcement process,
+from pre-litigation communications to post-trial appeals. The following are a
+few prominent types of abuses, and ways to address them.
+
+\subsection{Demand Letters}
+\SectionNote
+
+Prior to any lawsuit being filed, a patent owner can send a letter, arguing that
+the recipient of the letter infringes a patent and demanding royalty
+payments.\note{see, e.g., swang (``Demand letters are letters patent owners send
+to unsuspecting businesses or individuals alleging patent infringement and
+threatening a lawsuit.'')}
+In itself, the process of sending a demand letter is perfectly ordinary, and
+even commendable insofar as it is preferable to negotiate an arrangement without
+having to incur the costs of court procedures.
+
+Recently, however, a number of unscrupulous patent owners have found an easy way
+to abuse demand letters. They send letters to small companies, who lack the
+resources or experience to evaluate the merits of the arguments presented. They
+then are free to make outrageous or inflated claims, demanding payments without
+even explaining what products infringe the patents, hoping that the letter
+recipients are too scared or cash-strapped to fight back.
+
+Some of these abusive demand letters even go so far as to mislead or deceive the
+recipients. Many threaten immediate litigation, when the sender actually has no
+intention of bringing a lawsuit. Some accuse recipients of infringement even
+when the sender has clearly not done any investigation to determine if the
+recipient actually infringes the patents asserted.\note{see generally
+hec-testimony at 3-5 (discussing these various abusive demand letter practices)}
+These misleading and
+deceptive practices have raised eyebrows, and triggered investigative efforts at
+both the federal and state levels.\note{see vtne-ag at 3-5}
+
+Today little is known about the world of patent demand letters, due in no small
+part to the efforts of the senders of those letters, who use nondisclosure
+agreements and shell companies to hide their activities.\note{see hec-testimony
+at 6; ftc-study at 61{,}353 (``While workshop panelists and commenters identified
+potential harms and efficiencies of [patent assertion entity] activity, they
+noted a lack of empirical data in this area, and recommended that the Federal
+Trade Commission use its authority\ldots to collect information on PAE
+acquisition, litigation, and licensing practices.'')}
+Thus, tackling the problem of abusive demand letters must begin with learning
+about the scope of the demand letter economy. Proposals to create a registry of
+demand letters would provide that vital information, allowing lawmakers and
+enforcers to deal with abuses systematically.\note{see hec-testimony at 9-10}
+
+Furthermore, many of the problems with patent demand letters stem from an
+asymmetry between the sender, who has substantial legal resources and knowledge
+of the patents, and the recipient, who often lacks both. Thus, requiring certain
+disclosures of information in demand letters
+would
+put the recipients of those
+letters on more even footing.\note{see hec-testimony at 11-12}
+That way, discussions relating to the demand
+letter can be based on the merits of the case, and not based on an imbalance in
+information.
+
+\subsection{Fair Notice to Patent Defendants}
+\SectionNote
+
+When a patent owner wishes to enforce a patent through the courts, the first
+step is for the patent owner to file a paper, called a complaint, with the
+court. The complaint should set forth the patent owner's basis for the case, and
+put the accused infringer on notice of what is being accused.\note{see frcp at -
+8/a2 (a complaint must include ``a short and plain statement of the claim
+showing that the pleader is entitled to relief'')}
+
+In every other area of the law, a complaint must provide specific details about
+what the defendant did and how it injured the plaintiff. The defendant has a
+right to be put on notice of the plaintiff's arguments, so that the defendant
+can fairly defend the case.\note{see twombly at 559 (finding, because ``the
+threat of discovery expense will push cost-conscious defendants to settle even
+anemic cases,'' that ``it is only by taking care to require allegations that
+reach the level suggesting conspiracy that we can hope to avoid the potentially
+enormous expense of discovery in cases with no reasonably founded hope that
+the discovery process will reveal relevant evidence\ldots.'')}
+This is called ``notice pleading,'' and has been the
+law of the United States for hundreds of years.
+
+Due to a loophole in the rules of litigation procedure, though, patent owners
+are currently exempt from this basic principle. A patent owner can simply name
+defendants and a few patent numbers on the complaint, and that is enough to get
+in the courtroom door.\footnote{More specifically, Form 18 of the Appendix of
+Forms to the Federal Rules of Civil Procedure specifies a complaint that
+essentially only identifies the patents being infringed; the Federal Circuit has
+held that ``to the extent that any conflict exists between \emph{Twombly} (and
+its progeny) and the Forms regarding pleadings requirements, the Forms
+control.'' \sentence{k-tech at 1283; see also patentlyo-twombly}.}
+
+Obviously, such a bare-bones complaint fails the notice requirement and denies
+accused patent infringers the necessary information to mount a
+defense.\note{macronix at *17 (``[Rejecting Form 18] will serve to winnow out
+weak (or even baseless) claims and will protect defendants from the need to
+prepare defenses for the many claims that inevitably fall by the way side in
+patent cases. That also will serve to reduce the expense and burden of this kind
+of litigation to both parties which, like the antitrust litigation in
+\emph{Twombly}, is onerous.'')}
+At a
+minimum, the accused infringer deserves to know what products are being accused,
+what claims of the patent are being used, and why the patent owner believes that
+those products infringe the patent. Thus, a simple, straightforward fix would be
+to require that information to be set forth in the complaint.
+
+\subsection{Costs of Litigation Procedures}
+\SectionNote
+
+Patent litigation is expensive: cases can cost millions of dollars to
+complete.\note{cnet-aipla (attorney fees for a fully litigated case are between
+\$650,000 and \$5 million)} That cost can make it impossible for many small
+businesses to defend against even an illegitimate patent: 55\% of companies sued
+by patent assertion entities made \$10 million a year or less in
+revenue.\note{chien-patentlyo} So the question is whether the costs of
+litigation can be reduced.
+
+Part of reducing costs is limiting the volume of patent litigation, as discussed
+above.\note{see this at volume}
+A patent case can be expanded to be as large as the patent owner
+desires. The patent owner can augment the case easily:
+\begin{itemize}
+\item By accusing more products of infringement, forcing the defendant to
+produce volumes of documents of product development, sales and financial
+data, and arguments relating the additional products and the patents.
+\item By adding more patent claims into the lawsuit, forcing the defendant to
+research and interpret the additional claims, compare the accused products to
+those new claims, and develop new arguments.
+\item By obtaining additional patents from the Patent Office (through, for
+example, patent continuation practice), thus forcing the defendant to
+effectively relitigate the same case over and over again with each additional
+patent.
+\end{itemize}
+So reducing the opportunity to expand patent litigation will help to rein in
+costs.
+
+A second potential area of cost reduction is in discovery, which is the portion
+of a lawsuit in which the parties can ask each other for documents and other
+information.
+Discovery is an essential and valuable part of our justice system,
+as it helps to ensure that both sides have access to truthful and complete
+information as they prepare their cases. But discovery can be abused, and it is
+often abused in patent litigation.
+
+Abuse of the discovery process is simple: either party simply needs to demand a
+large number of documents or request a large volume of information. Under the
+current rules, the party responding to the requests has to pay for the costs of
+those requests, so in the face of abusive discovery that party stands to outlay
+enormous expenses, including time and attorney fees.
+
+For example, a party can demand that its opponent turn over all emails relating
+to a certain product and dated within the last six years. In order to comply
+with that request, attorneys will have to gather and sift through all the emails
+of all the employees of a company. This typically results in a database of
+millions of emails. Then the attorneys will have to read through each and every
+one of those millions of emails, to determine which of them include information
+that is confidential or attorney-client privileged. As can easily be imagined,
+this is a time-consuming, labor-intensive, expensive process.
+
+The simple solution to patent litigation discovery abuse is limiting discovery.
+Of course, care must be taken to ensure that sufficient discovery is allowed so
+that the case may proceed fairly and equitably. Two specific reforms, both of
+which have been proposed in bills introduced in Congress,\note{see goodlatte at section 6/a2; cornyn at section 4, S 300/a1; farenthold at section 5, S 300A}
+are directed toward alleviating discovery abuses.
+
+First, the costs
+of responding to discovery can be shifted, in certain situations, to the
+requesting party rather than the responding party. In most patent cases,
+enormous volumes of documents are requested, but very few end up being used: one
+company reported that, in one case, 10 million documents were exchanged, but
+only about 2,000 were actually used at trial.\note{gao-report at 38; see also
+gao-report at 37-38 (``One judge that we spoke to said that only a few of the
+documents in discovery are actually used at trial---often less than one document
+in 10,000\ldots.'')} Making the requesting party pay for those millions of
+documents will incentivize the party to draw up narrower, more careful requests.
+
+Second, the time
+for discovery can be shifted back to later in the litigation. Specifically, a
+patent case traditionally proceeds by first determining what the patent means
+and then determining whether the products fit within the scope of the patent.
+Determining what the patent means is often sufficient to determine the outcome
+of the case, and the meaning of the patent should generally be determinable
+without much discovery. Thus, the bulk of discovery could be pushed back until
+after the determination of the meaning of the patent.
+
+\subsection{Reasonable Royalty Computations}
+\SectionNote
+\bblabel[section \#]{reasonable-royalty}
+
+If a court deems a patent valid, enforceable, and infringed, then the court
+generally awards a ``reasonable royalty'' to the patent owner.\footnote{Where
+the patent owner is an operating company, the patent owner may alternately
+receive ``lost profits,'' intended to be a computation of what the patent owner
+would have received absent infringement. But the reasonable royalty is always a
+floor, or lower bound, on the award to a patent owner. \sentence{see 35usc at S
+284}. The reasonable royalty is by far the most common award. \sentence{pwc at
+11}.}
+The reasonable royalty is intended to provide the patent owner with
+an appropriate fraction of the revenues earned from an infringing product; in
+the words of many courts, that fraction should be an amount that the patent
+owner and infringer would have agreed upon in a hypothetical
+negotiation.\note{see jarosz at 782-783}
+
+Simple economics dictates that the reasonable royalty should be based on the
+difference in value between the product with the patented feature, and the
+product without it (or with a noninfringing alternative).\note{see, e.g.,
+lemley-holdup at 1996, 1999 (defining the ``benchmark royalty rate'' as
+proportional to the ``\emph{Value} per unit of the patented feature to the
+downstream firm in comparison with the next best alternative technology)}
+Highly useful,
+inventive features would be more valuable to a product and thus would warrant a
+higher royalty; small features embedded in complex, multifunction products would
+warrant a lower one.\note{see chao at 122-124}
+
+Unfortunately, the methods of computing the reasonable royalty are far from
+simple. Courts often quote a legal test of fifteen different elements intended
+to help determine the reasonable royalty amount.\note{see gp at 1120}
+As commentators have observed,
+many of these fifteen factors are duplicative or unhelpful, and the sheer number
+of factors to consider often overwhelms the judges and juries tasked with
+evaluating those factors.\note{see, e.g., seaman at 1703 (``Such broad,
+multifactor tests have been criticized as being poorly designed and containing
+duplicative or overlapping factors, which can lead to unpredictable results.'')}
+Attempts to simplify this test have not helped either:
+for many years a ``rule of thumb'' was to simply award 25\% of the profits of a
+product, without regard to the merits of the patent at all.\note{see uniloc at
+1314-1315 (``[T]his court has passively tolerated [the 25 percent rule's]
+use\ldots.'')}
+
+The complexity of assessing the reasonable royalty has led to abusive practices.
+For example, because one factor considered is comparable royalty rates in the
+industry, many patent owners put up websites or advertisements with inflated
+royalty rates, in hopes of influencing judges and juries to adopt those numbers.
+Additionally, patent owners can acquire multiple patents on the same technology,
+in order to inflate the apparent value of that single technology. Some patent
+owners will even sue a few weak targets in order to establish a ``market price''
+for the patent.\note{see love at 1635}
+
+Setting the royalty rate correctly is crucial to balancing the incentives that
+underlie the patent system. The rate must be high enough to preserve the
+incentives for inventors to disclose their inventions, but too high a rate would
+stifle the marketplace, disincentivize further innovations, and undercut the
+very incentives the patent system sets out to preserve.
+
+Determining the proper
+rate is a difficult task, and constructing rules to guide that determination is
+even more difficult.
+Shortcuts are not appropriate: even the 25\% rule was eventually rejected for
+being a ``fundamentally flawed tool.''\note{uniloc at 1315 (``This court now
+holds as a matter of Federal Circuit law that the 25 percent rule of thumb is a
+fundamentally flawed tool for determining a baseline royalty rate in a
+hypothetical negotiation.'')}
+What is certain is that the existing rules must be
+revised to return the reasonable royalty computation back to its basic
+principles, and to avoid the sort of gamesmanship that currently goes on.
+
+\subsection{Alternatives to Litigation}
+\SectionNote
+
+Given the high cost of patent litigation, one would hope for a low-cost
+alternative to handle some of the cases where possible. And, indeed, low-cost
+alternatives are provided and should be strongly supported.
+
+The Patent Office provides several of these alternatives to litigation. Through
+several procedures, the Patent Office can review issued patents to determine
+whether those patents were validly issued or not, often in view of new
+information such as obscure prior art not found by the patent
+examiner.\footnote{\emph{Ex parte} reexamination enables a third party to ask
+the Patent Office to reconsider a patent, but does not permit the third party to
+participate in the proceeding. \sentence{see 35usc at S 302-307; mpep at S
+2209}. Post grant review, \emph{inter partes} review, and covered business
+methods review all permit the third party to participate in the proceeding; the
+three procedures differ in when they may be filed, what patents they may be
+filed on, and the particular questions for reconsideration that may be presented
+to the Patent Office. \sentence{see 35usc at S 311-319 (inter partes review);
+35usc at S 321-329 (post grant review); aia[section 18] at 329-331 (covered
+business methods program); uspto-ipd}.}
+
+These Patent Office procedures have a number of advantages. For one thing, they
+are significantly lower in cost, because they deal with fewer issues and do not
+require all the trappings of court litigation.\note{southard (``In light of
+these figures, challenging patent validity in a district court proceeding is
+likely to be a far more expensive proposition than contesting validity in the
+PTO modified proceedings.'')} Additionally, the procedures are
+adjudged by Patent Office employees, who generally have specialized backgrounds
+in technology and patent law, as opposed to judges and juries who often lack
+technical expertise and are confounded by the complexities of patent
+law.\note{moore-juries at 409 (``Closer scrutiny of judge and jury
+decisionmaking elucidates differences which could implicate flaws in juror
+comprehension.''); moore-judges at 7 (``[F]ew district court judges are one of
+ordinary skill in the technology of the invention.'')}
+Furthermore, the Patent Office procedures facilitate early resolution of patent
+validity questions, because many of the procedures are open to any party who
+feels threatened by a patent,\note{see, e.g., 35usc at S 321/a (``[A] person who
+is not the owner of a patent may file with the Office a petition to institute a
+post-grant review of the patent.'')}
+whereas patent litigation is only available to
+those who have been formally sued or threatened with a specific
+lawsuit.\footnote{The mechanism for a party to bring a district court lawsuit
+against a patent owner is called a ``declaratory judgment action,'' and such an
+action can only be brought where ``the facts alleged, under all the
+circumstances, show that there is a substantial controversy, between parties
+having adverse legal interests, of sufficient immediacy and reality to warrant
+the issuance of a declaratory judgment.'' \sentence{medimmune at 127 (quoting
+\clause{maryland-casualty at 273})}.}
+
+Thus, the Patent Office procedures offer alternatives that potentially avoid the
+overbearing costs of litigation. Efforts to enlarge the use of these programs
+can thus further help to alleviate the potential abusive practices that arise
+from those overbearing costs.
+
+Other litigation alternatives can also be envisioned. For example, some have
+proposed a small claims court for resolving smaller patent disputes on a lower
+cost basis.\note{see, e.g., greenspoon} Although ideas for a patent small claims
+court are generally
+proposed as a way to assist small patent owners, such courts could be designed
+to also assist small defendants, shielding those defendants from the abusive
+discovery practices described above, for example. Similarly, some countries
+provide for compulsory licensing of patents;\note{e.g., aus-patent at chapter
+12, section 133} in the United States compulsory
+licensing is provided for certain copyrights in music\note{e.g., 17usc at S 115
+(compulsory licenses for phonorecords of nondramatic musical works)}
+but not for patents.
+
+Obviously, these litigation alternatives must be carefully considered to ensure
+that they provide adequate protections to both patent owners and accused
+infringers. But to solve the problem of skyrocketing patent litigation costs,
+careful consideration of alternatives is warranted.
+
+\subsection{Leveling the Playing Field}
+\SectionNote
+
+The high cost of patent litigation creates avenues for abuse, because that high
+cost is borne unevenly. The owner of a patent can bring lawsuits at practically
+no cost, while the defendant to that suit is guaranteed to have to pay enormous
+sums no matter what the outcome. It is this imbalance in costs, to a large
+degree, that has given rise to the industry of patent assertion entities,
+otherwise derisively termed ``patent trolls.''\footnote{This section is
+generally adapted from \sentence{cduan-forbes}.}
+
+Patent assertion entities can structure their lawsuits so that they  have
+nothing to lose when they sue others for patent infringement. Law firms will
+take the cases on contingency fee arrangements, so there are no legal fees to be
+paid. A successful plaintiff stands to win millions in court-awarded
+royalties---a PricewaterhouseCoopers study found a median award of \$7.2 million
+to non-practicing entities in 2012\note{see pwc at 7 chart 2b}---and
+the unsuccessful one can just walk away.
+Thus, patent assertion can be a game of all upside and no downside, of no risk
+and all reward.
+
+Contrast this with the dire situation of the defendant to a patent suit. Losing
+a case means being on the hook for millions of dollars in damages. And winning
+the case means being on the hook for millions of dollars in legal
+fees---according to the American Intellectual Property Law Association, those
+fees clock in between \$650,000 and \$5 million.\note{cnet-aipla}
+
+The solution is to level the uneven playing field of patent law by shifting the
+burden of legal fees to the loser of the lawsuit. This will place appropriate
+responsibility on the patent owners, while giving victims of patent trolls a
+fighting chance against weak and questionable patents. This is why fee shifting
+in patent cases is part of four patent bills in Congress today.\note{shield at
+section 2, S 285A/a4;
+cornyn at section 5, S 285/a; goodlatte at section 3/b1, S 285/a; hatch}
+
+But a fee shifting law alone is no better than the paper it is printed on,
+because it could be easily skirted: The patent troll simply runs a business with
+no assets, then when attorney fees come due, it throws up its hands, declares
+bankruptcy, and walks away.
+
+Thus, one proposed solution is to require a financial bond, ensuring that the
+plaintiff actually has the assets to pay an award of attorney fees, if
+necessary. Faced with an obligation to make this assurance, a patent troll with
+a dubious patent will think twice before aggressively overexploiting it.
+
+Leveling the playing field of patent litigation is an important component of
+curbing abuses of the patent system. Those abuses will diminish when they
+cease to be
+financially viable. By undercutting the financial viability of abusive
+patent assertion, one would hope that those abusers would abandon the practice
+in favor of other, perhaps more beneficial, activities.
+
+\section{Maintaining Competition in the Innovation Economy}
+\SectionNote
+\AuthorityTag{Maintaining Competition}
+
+The fact that a patent is a temporary monopoly means that a patent is an
+exemption from the ordinary competitive free market.\note{e.g., precisionco at
+816 (``[A] patent is an exception to the general rule against monopolies and to
+the right to access to a free and open market.'') (quoted in: walkerprocess at
+177)}
+But that fact alone does
+not grant the patent owner the right to engage in all manner of anticompetitive
+practices. As the Supreme Court has recognized, ``patent and antitrust policies
+are both relevant in determining the `scope of the patent
+monopoly.'\,''\note{actavis at 2231}
+
+Nevertheless, less scrupulous patent owners have found methods of
+abusing the patent system to engage in anticompetitive practices that go beyond
+the ordinary and appropriate scope of the patent. Such anticompetitive
+practices include breaking of FRAND obligations
+and patent holdup, which are described below.
+
+There are those who believe that, because the patent is a limited monopoly,
+that the patent owner ought to be authorized to use patents in any manner,
+regardless of the effect on competition.\note{see, e.g., actavis at 2238-2239
+(Roberts, J., dissenting)} However, this misconstrues the purpose
+of patents. The patent monopoly is granted not for the sake of monopoly, but as
+a means to technological innovation and, ultimately, a more competitive, open
+marketplace in technology. Thus, practices involving patents must be
+scrutinized, as any market practices must be scrutinized, for their effects on
+a competitive marketplace and consumer access to technology.\note{see actavis at
+2231; see also hovenkamp at 60 (``Consumer harm does result when the
+intellectual property system provides more exclusionary power than is necessary
+to develop some new thing, or when it excludes without providing anything new at
+all.'')}
+
+\subsection{FRAND Obligations}
+\SectionNote
+
+This anticompetitive problem arises with regard to so-called
+``standards-essential patents.'' These patents arise out of the technology
+community's use of technology standards, interoperability protocols
+such as WiFi or HTML, which enable different devices to communicate and operate
+with each other.\note{see, e.g., ftc-doj at 33 (``Standards make networks, such
+as the Internet and wireless telecommunications, more valuable by allowing
+products to interoperate.'')}
+Technology standards are often adopted by bodies known as
+standards-setting organizations, examples of which include IEEE and
+ANSI.\looseness=1
+
+When a company develops a new technology and wishes that technology to be
+incorporated into a standard, the standards-setting organization often imposes
+a requirement: the company must guarantee that it will fairly license any
+patents covering that technology.\note{see ftc-doj at 46-47}
+This is a basic bargain: the company gets
+widespread adoption of its technology, in exchange for the company agreeing to
+lower license fees on patents to that technology.\note{see lemley-sep at 1137
+(``FRAND commitments serve two primary goals: (1) to promote the standard by
+assuring companies that they will not be blocked from bringing their products to
+market\ldots, and (2) to provide reasonable rewards to those who have invested
+in research and development to develop the technology used by the standard.'');
+layne-farrar at 672 (``FRAND commitments are meant to address a prominent
+concern in standard setting: the adoption of a technology into a major standard
+could confer substantial market power, or substantially increased market power,
+on its owner.'')}
+This bargain is known as a
+``fair, reasonable and non-discriminatory,'' or FRAND, license
+obligation.\footnote{\sentence{see, e.g., layne-farrar at 672;
+lemley-sep at 1160 (``Parties have spent a great deal of time litigating the
+question of whether one or both sides have breached a FRAND commitment.'')}. The
+term ``RAND'' is essentially interchangeable with FRAND.}\looseness=1
+
+The anticompetitive practice arises when a holder of a FRAND-encumbered patent
+breaks that obligation and begins demanding excessive royalty payments for that
+patent or even attempts to block sale of the product on the market.\note{see
+doj-uspto at 6 (``A patent owner's voluntary F/RAND commitments may also affect
+the appropriate choice of remedy for infringement of a valid and enforceable
+standards-essential patent. In some circumstances, the remedy of an injunction or exclusion order may be inconsistent with the public interest.'')}
+Because the technology is already in a standard, other companies cannot
+easily move away from using that technology without breaking interoperability
+with other devices, thus giving the patent holder unfair leverage in the
+negotiations. The contractual obligation with the standards-setting
+organization might be avoided by transferring the patent to another party
+unencumbered by the obligation, a practice sometimes called ``patent
+privateering.''\note{see balto (``Privateering lets operating companies
+evade\ldots `FRAND or other licensing commitments,' and provides a method for
+`strategic outsourcing to PAEs to hinder rivals.'\,'')}
+
+This behavior adversely affects the ability of companies to adopt new
+technologies that interoperate with other products. Interoperability is a
+central concern of a competitive marketplace, so the breaking of a FRAND
+obligation can have serious effects on competition. Additionally, it is clear
+that this anticompetitive practice does not further any interest in
+compensating the inventor, for the inventor already agreed that any royalties
+due under the FRAND obligation were sufficient compensation. Accordingly,
+reforms directed to preventing this practice are appropriate and beneficial to
+the technology marketplace.
+
+\subsection{Patent Holdup}
+\SectionNote
+
+Many devices today include a large number of features, any one
+of which could be susceptible to patenting. One study, for example, estimated
+that there were 250,000 patents relevant to various aspects of
+smartphones.\note{see rpx at 59}
+For
+such complex products and services, patents can sometimes become a ``heckler's
+veto'': any one of those 250,000 patents could block access to smartphones,
+particularly because a patent owner can try to obtain an injunction to block
+sales of a product based on even the smallest part of that product being covered
+a patent.\footnote{Several Supreme Court justices recognized the risk of
+injunctions being used to demand an excessively high licensing fee.
+\sentence{see ebay at 396-397 (recognizing that, for non-practicing entities,
+``an injunction, and the potentially serious sanctions arising from its
+violation, can be employed as a bargaining tool to charge exorbitant fees to
+companies that seek to buy licenses to practice the patent.'')}.}
+This problem has been described as
+``patent holdup,'' because a single patent can effectively hold up production of
+or access to many other unrelated technologies.\note{ftc-doj at 38 (``A holder
+of IP incorporated into a
+standard can exploit its position if it is costly for users of the standard to
+switch to a different technology after the standard is set.''); lemley-holdup at
+1992-1993 (``The threat that a patent holder will obtain an injunction that will
+force the downstream producer to pull its product from the market can be very
+powerful.\ldots Injunction threats often involve a strong element of
+\emph{holdup} in the common circumstance in which the defendant has already
+invested heavily to design, manufacture, market, and sell the product with the
+allegedly infringing feature.'')}
+
+A related problem is called ``royalty stacking.'' Where royalties are awarded
+for
+individual patents, a device accused of infringing multiple patents can be
+subjected to multiple royalties that could theoretically reach beyond the
+actual profits for the device.\note{see lemley-holdup at 1993 (``Royalty
+stacking refers to situations in which a single product
+potentially infringes on many patents, and thus may bear multiple royalty
+burdens.'')}
+For example, if a device is found to infringe 50
+patents and each of those patents is adjudged to merit a 2\% royalty on revenues
+from the device, then 100\% of the revenues of the device would go to patent
+licenses, meaning that the device manufacturer would have to sell the device at
+a loss.
+
+Both of these problems arise out of systematic overvaluations of patents: when
+courts treat patents as being more valuable than they actually are, then the
+owners of those patents are able to forestall competition and innovation in the
+marketplace.\note{see lemley-holdup at 2013 (``the recent surge
+in patenting, especially in the information technology industry where royalty
+stacking is a serious concern, these overcharges, when aggregated, can lead to a
+very significant cost burden on producers.''); this at reasonable-royalty}
+
+\section{Conclusion: The Future of Patents}
+
+When we look back on over two hundred years of American history, we see that
+patents
+have played a central role in America's leadership in innovation. There is
+little question that the patent system has worked well in many respects,
+encouraging skilled engineers to develop new technologies and introduce those
+technologies to the consumer marketplace, thereby providing society with the
+benefits of advanced knowledge.
+
+But just as we find that patents have often served as the seed of innovation,
+we also find that the patent system has served as fertile ground for the
+unscrupulous to take advantage of complex laws for personal benefit at the
+cost of societal detriment. 
+
+The future of patents will shape the future of innovation. In that future, we
+hope that
+those who invent within the patent system can work in concert with those who
+work outside the patent system, to maximize the innovative capacities of both
+groups. We hope that patents serve their intended purpose of disseminating
+useful knowledge and are written in clear, reasonable language that gives
+effective notice to all parties of what is claimed. We hope that patent holders
+are compensated for their inventions, not on the basis of legal manpower and
+litigious tactics, but on the basis of the merits of inventions and the value
+they contribute.
+
+And ultimately, we hope, patents will serve as a part of a competitive and fair
+marketplace of technology, not geared toward transferring wealth from one party
+to another but rather focused on the end goal of making technology accessible
+and known to the consuming public. Such a patent system, then, would return to
+its noble roots set forth in the United States Constitution, of ``promoting the
+Progress of Science and the useful Arts.''
+
+\ifshortcompile\else
+\clearpage
+\appendix
+
+\twocolumn[\section{Notes}]
+\markboth{}{Notes}
+
+\theendnotes
+
+\clearpage
+
+\twocolumn[\section{Bibliography}]
+\markboth{}{Bibliography}
+
+\subsection*{Introduction}
+\AuthorityTable{Introduction}
+
+\subsection*{Background}
+\AuthorityTable{Background}
+
+\subsection*{Accounting for All Inventors}
+\AuthorityTable{Accounting for All Inventors}
+
+\subsection*{Clarity of Patents}
+\AuthorityTable{Clarity of Patents}
+
+\subsection*{Targeting the Right Parties}
+\AuthorityTable{Targeting the Right Parties}
+
+\subsection*{Avoiding Gamesmanship in Litigation}
+\AuthorityTable{Avoiding Gamesmanship in Litigation}
+
+\subsection*{Maintaining Competition}
+\AuthorityTable{Maintaining Competition}
+
+\fi
+
+\clearpage
+\onecolumn
+
+\hrule height 0pt depth 0pt
+
+\vfill
+
+\centerline{\includegraphics[width=.5\textwidth]{pkname-large.pdf}}
+
+\vskip2\baselineskip
+
+\begingroup
+\leftskip=.5in \rightskip=\leftskip
+
+Public Knowledge works at the intersection of copyright, telecommunications, and
+Internet law, at a time when these fields are converging. PK's experience in all
+three areas puts it in an ideal position to advocate for policies that serve the
+public interest.
+
+What Public Knowledge does:
+
+\begin{itemize}
+\leftskip=.5in \rightskip=\leftskip
+\item    Ensure universal access to affordable and open networks
+\item    Promote creativity through balanced copyright
+\item    Advance government transparency and the public’s access to knowledge
+\item    Uphold and protect consumer rights
+\item    Oppose policies that would slow technology, impede innovation, shrink
+the public domain, or limit fair use
+\item    Educate the press, the public, and policymakers using plain-language
+analysis, white papers, blog posts, and videos
+\item    Produce events that provide a forum for policymakers, the public,
+industry, and the press to exchange ideas about our core issues
+\end{itemize}
+
+\endgroup
+
+\vfill
+
+\noindent Copyright \textcopyright\ 2014 Public Knowledge. This work is licensed
+under the Creative Commons Attribution-ShareAlike 4.0 International License. To
+view a copy of this license, visit
+http://creativecommons.org/licenses/by-sa/4.0/.
+Footer images:
+William B. Hargrave, U.S. Pat.\ No.\ 765,361, Device for Eradicating Facial
+Wrinkles, filed Nov.\ 12, 1903.
+Charles A. Miller, U.S. Pat.\ No.\ 1,542,568, Radio Dial Adjuster, filed Dec.\
+29, 1922.
+Walter S. Olson, U.S. Pat.\ No.\ 964,803, Flying Toy Bird, filed Apr.\ 12, 1909.
+Charles G. Purdy, U.S. Pat.\ No.\ 1,466,559, Exercising Device, filed Mar.\ 29,
+1921.
+John C. Raymond, U.S. Pat.\ No.\ 627,351, Bicycle, filed Nov.\ 4, 1897.
+
+
+\end{document}
